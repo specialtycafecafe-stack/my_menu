@@ -12,17 +12,15 @@
     .container { max-width: 800px; margin: -30px auto 40px; padding: 20px; }
     .menu-section { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
     h1 { color: var(--primary-color); font-size: 2rem; margin: 10px 0; }
+
+    .menu-item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+    }
     .price-tag { color: #e67e22; font-weight: bold; }
     iframe { width: 100%; min-height: 900px; border: none; margin-top: 30px; border-top: 2px dashed #eee; }
-    /* 新增下拉式選單樣式 */
-    .menu-dropdown {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-        font-size: 1rem;
-    }
 </style>
 </head>
 <header>
@@ -33,26 +31,21 @@
 
 <div class="container">
     <div class="menu-section">
-        <h3>🍱 本週推薦</h3>
-        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 10px 0;">
-            <span>豪華招牌便當</span> <span class="price-tag">$120</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 10px 0;">
-            <span>特製香滷排骨</span> <span class="price-tag">$100</span>
-        </div>
-        
-        <!-- 新增的下拉式菜單 -->
-        <h3>完整菜單</h3>
-        <select class="menu-dropdown" onchange="window.location.href=this.value;">
-            <option value="">請選擇餐點</option>
-            <option value="#item1">豪華招牌便當 - $120</option>
-            <option value="#item2">特製香滷排骨 - $100</option>
-            <option value="#item3">經典炸雞腿飯 - $110</option>
-            <option value="#item4">健康蔬食餐盒 - $90</option>
-            <option value="#item5">麻婆豆腐燴飯 - $95</option>
-        </select>
-        
-         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCeZBf5ywZLGY6N1iOIHhHL1IRxyYVOE67izFktlj6OaBwwg/viewform?embedded=true" width="640" height="974" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+
+        <!-- 改成飲品區 -->
+        <h3>🥤 飲品</h3>
+        <div class="menu-item"><span>冬瓜檸檬</span> <span class="price-tag">$35</span></div>
+        <div class="menu-item"><span>古早味紅茶</span> <span class="price-tag">$25</span></div>
+        <div class="menu-item"><span>鮮奶茶</span> <span class="price-tag">$45</span></div>
+
+        <!-- 甜點區 -->
+        <h3>🍰 甜點</h3>
+        <div class="menu-item"><span>手工布丁</span> <span class="price-tag">$40</span></div>
+        <div class="menu-item"><span>巧克力香蕉蛋糕</span> <span class="price-tag">$55</span></div>
+        <div class="menu-item"><span>檸檬塔</span> <span class="price-tag">$50</span></div>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCeZBf5ywZLGY6N1iOIHhHL1IRxyYVOE67izFktlj6OaBwwg/viewform?embedded=true">
+        </iframe>
     </div>
 </div>
 
