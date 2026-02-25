@@ -14,6 +14,15 @@
     h1 { color: var(--primary-color); font-size: 2rem; margin: 10px 0; }
     .price-tag { color: #e67e22; font-weight: bold; }
     iframe { width: 100%; min-height: 900px; border: none; margin-top: 30px; border-top: 2px dashed #eee; }
+    /* 新增下拉式選單樣式 */
+    .menu-dropdown {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 1rem;
+    }
 </style>
 </head>
 <header>
@@ -31,6 +40,17 @@
         <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 10px 0;">
             <span>特製香滷排骨</span> <span class="price-tag">$100</span>
         </div>
+        
+        <!-- 新增的下拉式菜單 -->
+        <h3>完整菜單</h3>
+        <select class="menu-dropdown" onchange="window.location.href=this.value;">
+            <option value="">請選擇餐點</option>
+            <option value="#item1">豪華招牌便當 - $120</option>
+            <option value="#item2">特製香滷排骨 - $100</option>
+            <option value="#item3">經典炸雞腿飯 - $110</option>
+            <option value="#item4">健康蔬食餐盒 - $90</option>
+            <option value="#item5">麻婆豆腐燴飯 - $95</option>
+        </select>
         
          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCeZBf5ywZLGY6N1iOIHhHL1IRxyYVOE67izFktlj6OaBwwg/viewform?embedded=true" width="640" height="974" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
     </div>
