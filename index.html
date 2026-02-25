@@ -5,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>美味外送菜單</title>
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 20px; background: #f4f4f4; text-align: center; }
-        .menu-card { background: white; border-radius: 10px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1 { color: #e67e22; }
-        iframe { width: 100%; min-height: 800px; border: none; border-radius: 10px; }
-    </style>
+    :root { --primary-color: #ff6b6b; --bg-color: #f9f9f9; }
+    body { font-family: "Microsoft JhengHei", sans-serif; background: var(--bg-color); margin: 0; color: #333; }
+    header { background: white; padding: 40px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .hero-img { width: 100%; max-width: 600px; border-radius: 15px; margin-bottom: 20px; }
+    .container { max-width: 800px; margin: -30px auto 40px; padding: 20px; }
+    .menu-section { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    h1 { color: var(--primary-color); font-size: 2rem; margin: 10px 0; }
+    .price-tag { color: #e67e22; font-weight: bold; }
+    iframe { width: 100%; min-height: 900px; border: none; margin-top: 30px; border-top: 2px dashed #eee; }
+</style>
 </head>
-<body>
+<header>
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" class="hero-img" alt="美食首圖">
+    <h1>🔥 巷口美味外送</h1>
+    <p>每日現點現做 · 滿 $300 免運</p>
+</header>
 
-    <h1>🍔 點餐小舖</h1>
-    
-    <div class="menu-card">
-        <h3>今日精選菜單</h3>
-        <p>🍱 經典排骨飯 - $100</p>
-        <p>🍗 酥炸雞腿飯 - $120</p>
-        <p>🥤 冰鎮紅茶 - $25</p>
+<div class="container">
+    <div class="menu-section">
+        <h3>🍱 本週推薦</h3>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 10px 0;">
+            <span>豪華招牌便當</span> <span class="price-tag">$120</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 10px 0;">
+            <span>特製香滷排骨</span> <span class="price-tag">$100</span>
+        </div>
+        
+         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCeZBf5ywZLGY6N1iOIHhHL1IRxyYVOE67izFktlj6OaBwwg/viewform?embedded=true" width="640" height="974" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
     </div>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCeZBf5ywZLGY6N1iOIHhHL1IRxyYVOE67izFktlj6OaBwwg/viewform?embedded=true" width="640" height="974" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+</div>
 
-</body>
 </html>
