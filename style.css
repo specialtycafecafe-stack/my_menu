@@ -51,6 +51,8 @@ h1 {
     padding: 25px;
     border-radius: 15px;
     text-align: left;
+    display: flex;
+    justify-content: center;
 }
 
 .rules-grid {
@@ -92,6 +94,8 @@ h1 {
     padding: 40px;
     border-radius: 25px;
     box-shadow: var(--card-shadow);
+    display: flex;
+    justify-content: center;
 }
 
 .category {
