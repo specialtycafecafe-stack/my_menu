@@ -1,17 +1,17 @@
-/* 1. 全域修正：確保寬度計算包含 Padding */
 * {
     box-sizing: border-box;
+    overflow-x: hidden
 }
 
 html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* 徹底禁止橫向捲動，防止左偏 */
+    overflow-x: hidden; 
     background-color: #f4f7f6; /* 背景灰色 */
 }
 
-/* 2. Header 置中修正 */
+/* 2. Header 置中 */
 .main-header {
     width: 100%;
     background: white;
@@ -22,10 +22,10 @@ html, body {
 .header-container {
     width: 90%; 
     max-width: 700px;
-    margin: 0 auto; /* 絕對置中關鍵 */
+    margin: 0 auto; 
 }
 
-/* 3. 菜單卡片置中修正 */
+/* 3. 菜單卡片置中 */
 .container {
     width: 100%;
     padding: 20px 0; 
@@ -35,7 +35,7 @@ html, body {
     background: white;
     width: 92%; 
     max-width: 800px; 
-    margin: 0 auto; /* 這是置中的靈魂 */
+    margin: 0 auto; 
     padding: 30px 20px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -51,11 +51,11 @@ html, body {
     padding: 10px;
     border-bottom: 1px dashed #eee;
     cursor: pointer;
-    border-radius: 8px; /* 增加圓角讓背景閃爍時更好看 */
+    border-radius: 8px; 
     transition: background-color 0.2s ease;
 }
 
-/* Google Form 修正：防止它把卡片撐歪 */
+/* Google Form */
 .form-section {
     width: 100%;
     overflow: hidden;
