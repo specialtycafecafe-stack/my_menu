@@ -36,9 +36,6 @@ body {
     max-width: 450px;
     border-radius: 20px;
     margin-bottom: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 h1 {
@@ -53,9 +50,7 @@ h1 {
     border: 1px solid #ffebeb;
     padding: 25px;
     border-radius: 15px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    text-align: left;
 }
 
 .rules-grid {
@@ -97,8 +92,6 @@ h1 {
     padding: 40px;
     border-radius: 25px;
     box-shadow: var(--card-shadow);
-    display: flex;
-    justify-content: center;
 }
 
 .category {
