@@ -14,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* 全域置中 */
+    overflow-x: hidden
 }
 
 /* Header 置中排版 */
