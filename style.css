@@ -1,74 +1,93 @@
-* {
-    box-sizing: border-box;
-}
-
 html, body {
-    width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    background-color: #f4f7f6; /* 背景灰色 */
+    width: 100%;
+    overflow-x: hidden;  /* 防止縮放時產生的水平溢出 */
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/*Header 置中*/
+/*Header*/
 .main-header {
     width: 100%;
     background: white;
+    display: flex;
+    justify-content: center; 
     padding: 40px 0;
-    text-align: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
 .header-container {
     width: 90%;
     max-width: 700px;
-    margin: 0 auto; 
+    text-align: center;
 }
 
-/*菜單置中*/
+/* 卡片置中 */
 .container {
     width: 100%;
-    padding: 20px 0; 
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15px;
 }
 
 .menu-card {
     background: white;
-    width: 92%; 
-    max-width: 800px; 
-    margin: 0 auto; 
-    padding: 30px 20px;
-    border-radius: 20px;
+    width: 100%; 
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
 
-/* 品項 */
+/* 4. 品項與「已複製」標籤*/
 .menu-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 500px;
-    margin: 0 auto 15px;
-    padding: 10px;
+    margin: 0 auto 12px; 
+    padding: 12px;
     border-bottom: 1px dashed #eee;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.2s;
 }
 
-
-@keyframes fadeInOut {
-    0% { opacity: 0; transform: scale(0.8); }
-    20% { opacity: 1; transform: scale(1); }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
+/* 綠色小標籤*/
+.copy-feedback {
+    background-color: #27ae60;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-right: 8px;
+    white-space: nowrap;
+    /* 簡單的出現動畫 */
+    animation: popIn 0.3s ease-out;
 }
 
-/* Google Form */
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* 5. Google Form */
 .form-section {
     width: 100%;
-    overflow: hidden;
-    margin-top: 30px;
+    max-width: 700px; /* 表單寬度 */
+    margin: 30px auto 0;
 }
 
 iframe {
     width: 100%;
     min-height: 800px;
     border: none;
-    display: block;
+    border-radius: 15px;
 }
