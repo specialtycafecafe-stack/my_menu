@@ -10,24 +10,25 @@ body {
     font-family: "Microsoft JhengHei", sans-serif;
     background-color: var(--bg-gray);
     margin: 0;
+    padding: 0;
     color: #444;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 全域置中 */
+    width: 100%;
+    overflow-x: hidden;
 }
 
-/* Header 置中排版 */
+/* Header排版 */
 .main-header {
     width: 100%;
     background: white;
-    padding: 50px 20px;
+    padding: 50px 0px;
     display: flex;
-    justify-content: center;
     box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
 .header-container {
     max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -79,11 +80,9 @@ h1 {
 
 /* 菜單卡片置中 */
 .container {
-    width: 100%;
     max-width: 900px;
+    margin: 0 auto;
     padding: 40px 20px;
-    display: flex;
-    justify-content: center;
 }
 
 .menu-card {
