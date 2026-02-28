@@ -1,88 +1,144 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;  /* 防止縮放時產生的水平溢出 */
-    background-color: #f4f7f6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+:root {
+    --primary-red: #ff6b6b;
+    --coffee-brown: #6f4e37;
+    --price-orange: #e67e22;
+    --bg-gray: #f4f7f6;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/*Header*/
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background-color: var(--bg-gray);
+    margin: 0;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 全域置中 */
+}
+
+/* Header 置中排版 */
 .main-header {
     width: 100%;
     background: white;
+    padding: 50px 20px;
     display: flex;
-    justify-content: center; 
-    padding: 40px 0;
+    justify-content: center;
     box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
 .header-container {
-    width: 90%;
     max-width: 700px;
     text-align: center;
 }
 
-/* 卡片置中 */
+.hero-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: var(--primary-red);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* 注意事項卡片 */
+.notice-card {
+    background: #fffafa;
+    border: 1px solid #ffebeb;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .rules-grid { grid-template-columns: 1fr; }
+}
+
+.rule-item strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--coffee-brown);
+}
+
+.rule-item ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* 菜單卡片置中 */
 .container {
     width: 100%;
     max-width: 900px;
+    padding: 40px 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 15px;
+    justify-content: center;
 }
 
 .menu-card {
     background: white;
-    width: 100%; 
-    max-width: 800px;
-    padding: 30px;
+    width: 100%;
+    padding: 40px;
     border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    box-sizing: border-box;
+    box-shadow: var(--card-shadow);
 }
 
-/* 4. 品項與「已複製」標籤*/
+.category {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h3 {
+    color: var(--primary-red);
+    border-bottom: 2px solid var(--primary-red);
+    display: inline-block;
+    padding: 0 20px 5px;
+    margin-bottom: 25px;
+}
+
+h4 {
+    color: #888;
+    margin: 15px 0 10px;
+    font-size: 1rem;
+}
+
+/* 選單項目排版 */
 .menu-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 500px;
-    margin: 0 auto 12px; 
-    padding: 12px;
+    max-width: 450px;
+    margin: 0 auto 12px; /* 項目在卡片內置中 */
+    padding-bottom: 8px;
     border-bottom: 1px dashed #eee;
-    cursor: pointer;
-    border-radius: 10px;
-    position: relative;
-    transition: background-color 0.2s;
+    transition: 0.2s;
 }
 
-/* 綠色小標籤*/
-.copy-feedback {
-    background-color: #27ae60;
-    color: white;
-    font-size: 0.7rem;
-    padding: 2px 8px;
-    border-radius: 20px;
-    margin-right: 8px;
-    white-space: nowrap;
-    /* 簡單的出現動畫 */
-    animation: popIn 0.3s ease-out;
+.menu-item:hover {
+    color: var(--primary-red);
+    border-bottom-color: var(--primary-red);
 }
 
-@keyframes popIn {
-    0% { transform: scale(0.5); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+.price {
+    color: var(--price-orange);
+    font-weight: bold;
 }
 
-/* 5. Google Form */
+/* Google Form */
 .form-section {
-    width: 100%;
-    max-width: 700px; /* 表單寬度 */
-    margin: 30px auto 0;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #f9f9f9;
 }
 
 iframe {
