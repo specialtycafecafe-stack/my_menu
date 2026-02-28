@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("興生吧選單系統已啟動");
+
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // 點擊效果：輕微閃爍提示
+            item.style.backgroundColor = '#fff0f0';
+            setTimeout(() => {
+                item.style.backgroundColor = 'transparent';
+            }, 300);
+
+document.addEventListener('DOMContentLoaded', () => {
     const menuItems = document.querySelectorAll('.menu-item');
 
     menuItems.forEach(item => {
