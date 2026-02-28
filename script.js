@@ -5,17 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuItems.forEach(item => {
         item.addEventListener('click', () => {
-            // 點擊閃爍效果
+            // 點擊效果：輕微閃爍提示
             item.style.backgroundColor = '#fff0f0';
             setTimeout(() => {
                 item.style.backgroundColor = 'transparent';
             }, 300);
             
-            //點擊自動複製品項名稱      
+            // 點擊自動複製品項
+    
             const name = item.querySelector('span:first-child').innerText;
             navigator.clipboard.writeText(name);
-            alert('已複製：' + name + ' (可直接貼入表單)');
-            
+            alert('已複製：' + name );
+        
         });
     });
 });
