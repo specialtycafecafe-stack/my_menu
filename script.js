@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const name = item.querySelector('span:first-child').innerText;
             navigator.clipboard.writeText(name);
-            alert('已複製：' + name + ' (可直接貼入表單)');
+            alert('已複製：' + name );
             
         });
     });
