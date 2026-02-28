@@ -1,150 +1,70 @@
-:root {
-    --primary-red: #ff6b6b;
-    --coffee-brown: #6f4e37;
-    --price-orange: #e67e22;
-    --bg-gray: #f4f7f6;
-    --card-shadow: 0 10px 30px rgba(0,0,0,0.1);
+/* 1. 全域修正：確保寬度計算包含 Padding */
+* {
+    box-sizing: border-box;
 }
 
-body {
-    font-family: "Microsoft JhengHei", sans-serif;
-    background-color: var(--bg-gray);
+html, body {
+    width: 100%;
     margin: 0;
-    color: #444;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 全域置中 */
-    overflow-x: hidden
+    padding: 0;
+    overflow-x: hidden; /* 徹底禁止橫向捲動，防止左偏 */
+    background-color: #f4f7f6; /* 背景灰色 */
 }
 
-/* Header 置中排版 */
+/* 2. Header 置中修正 */
 .main-header {
     width: 100%;
     background: white;
-    padding: 50px 20px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-}
-
-.header-container {
-    max-width: 700px;
+    padding: 40px 0;
     text-align: center;
 }
 
-.hero-img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 20px;
-    margin-bottom: 25px;
+.header-container {
+    width: 90%; 
+    max-width: 700px;
+    margin: 0 auto; /* 絕對置中關鍵 */
 }
 
-h1 {
-    color: var(--primary-red);
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
-
-/* 注意事項卡片 */
-.notice-card {
-    background: #fffafa;
-    border: 1px solid #ffebeb;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: left;
-}
-
-.rules-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-@media (max-width: 600px) {
-    .rules-grid { grid-template-columns: 1fr; }
-}
-
-.rule-item strong {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--coffee-brown);
-}
-
-.rule-item ul {
-    margin: 0;
-    padding-left: 18px;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-/* 菜單卡片置中 */
+/* 3. 菜單卡片置中修正 */
 .container {
     width: 100%;
-    max-width: 900px;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
+    padding: 20px 0; 
 }
 
 .menu-card {
     background: white;
-    width: 100%;
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: var(--card-shadow);
+    width: 92%; 
+    max-width: 800px; 
+    margin: 0 auto; /* 這是置中的靈魂 */
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.category {
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-h3 {
-    color: var(--primary-red);
-    border-bottom: 2px solid var(--primary-red);
-    display: inline-block;
-    padding: 0 20px 5px;
-    margin-bottom: 25px;
-}
-
-h4 {
-    color: #888;
-    margin: 15px 0 10px;
-    font-size: 1rem;
-}
-
-/* 選單項目排版 */
+/* 4. 品項排版 */
 .menu-item {
     display: flex;
     justify-content: space-between;
-    max-width: 450px;
-    margin: 0 auto 12px; /* 項目在卡片內置中 */
-    padding-bottom: 8px;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto 15px; 
+    padding: 10px;
     border-bottom: 1px dashed #eee;
-    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 8px; /* 增加圓角讓背景閃爍時更好看 */
+    transition: background-color 0.2s ease;
 }
 
-.menu-item:hover {
-    color: var(--primary-red);
-    border-bottom-color: var(--primary-red);
-}
-
-.price {
-    color: var(--price-orange);
-    font-weight: bold;
-}
-
-/* Google Form */
+/* Google Form 修正：防止它把卡片撐歪 */
 .form-section {
-    margin-top: 50px;
-    padding-top: 30px;
-    border-top: 2px solid #f9f9f9;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
 }
 
 iframe {
     width: 100%;
     min-height: 800px;
     border: none;
-    border-radius: 15px;
+    display: block;
 }
