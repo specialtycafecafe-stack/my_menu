@@ -4,86 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>咖啡社興生吧外送菜單</title>
-    <style>
-    :root { --primary-color: #ff6b6b; --bg-color: #f9f9f9; }
-    body { font-family: "Microsoft JhengHei", sans-serif; background: var(--bg-color); margin: 0; color: #333; }
-    header { background: white; padding: 40px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-    .hero-img { width: 100%; max-width: 600px; border-radius: 15px; margin-bottom: 20px; }
-    .container { max-width: 800px; margin: -30px auto 40px; padding: 20px; }
-    .menu-section { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-    h1 { color: var(--primary-color); font-size: 2rem; margin: 10px 0; }
-
-    .menu-item {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #eee;
-        padding: 10px 0;
-    }
-    .price-tag { color: #e67e22; font-weight: bold; }
-    iframe { width: 100%; min-height: 900px; border: none; margin-top: 30px; border-top: 2px dashed #eee; }
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<header style="text-align: center; max-width: 600px; margin: 0 auto; line-height: 1.8;">
-    <a href="https://ibb.co/jPfSxzqf">
-        <img src="https://i.ibb.co/39dn8vVd/image.jpg" alt="image" border="0" />
-    </a>
-    
-    <h1 style="margin-top: 20px;">興生吧外送表單</h1>
-    
-    <p>
-        請按照菜單去選擇並打出品項<br>
-        如需預訂複數個品項<br>
-        只需要在品項列中換行<br>
-        <br>
-        <strong>注意事項：</strong><br>
-        1️⃣ 糕點訂購<br>
-        固定外送日以官方 line 消息為主<br>
-        訂購前請先確認：<br>
-        當日行程表時間是否能配合取餐或收貨？<br>
-        當日是否有人力可協助處理？<br>
-        建議提前告知需求<br>
-        以避免臨時無法安排<br>
-        <br>
-        2️⃣ 咖啡飲品訂購<br>
-        一般咖啡飲品需至少提前 2 天預約<br>
-        若單次訂購手沖咖啡超過 10 杯（含）以上<br>
-        請提前 4 天以上提出申請<br>
-        以利咖啡豆準備<br>
-        人力與流程安排<br>
-        大量訂單未提前告知<br>
-        將視情況婉拒接單
-    </p>
-</header>
+<body>
 
-<div class="container">
-    <div class="menu-section">
+    <header class="main-header">
+        <div class="header-container">
+            <a href="https://ibb.co/jPfSxzqf" class="logo-link">
+                <img src="https://i.ibb.co/39dn8vVd/image.jpg" alt="興生吧 Logo" class="hero-img">
+            </a>
+            
+            <h1>興生吧外送表單</h1>
+            
+            <div class="notice-card">
+                <p>請按照菜單選擇並打出品項，如需預訂多個品項，請在品項列中<strong>換行</strong>。</p>
+                
+                <div class="rules-grid">
+                    <div class="rule-item">
+                        <strong>1️⃣ 糕點訂購</strong>
+                        <ul>
+                            <li>固定外送日以官方 LINE 消息為主。</li>
+                            <li>請確認當日時間是否能配合取餐/收貨。</li>
+                            <li>建議提前告知需求，避免臨時無法安排。</li>
+                        </ul>
+                    </div>
+                    <div class="rule-item">
+                        <strong>2️⃣ 咖啡飲品訂購</strong>
+                        <ul>
+                            <li>一般飲品需至少提前 2 天預約。</li>
+                            <li>手沖 10 杯以上請提前 4 天申請。</li>
+                            <li>大量訂單未提前告知將視情況婉拒。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-        <!-- 改成飲品區 -->
-        <h3> ☕ coffee </h3>
-        <h4> 手沖(冰/熱)</h4>
-        <div class="menu-item"><span>金雷娜安芭雅 日曬</span> <span class="price-tag">$80</span></div>
-        <div class="menu-item"><span>天使藝妓</span> <span class="price-tag">$80</span></div>
-        <div class="menu-item"><span>仲夏夜之月</span> <span class="price-tag">$90</span></div>
-        <div class="menu-item"><span>橘波旁</span> <span class="price-tag">$100</span></div>
-        <div class="menu-item"><span>祕密花園藝妓</span> <span class="price-tag">$130</span></div>
-        <h4>花式 & 義式</h4>
-        <div class="menu-item"><span>LONG BLACK(冰/熱)</span> <span class="price-tag">$70</span></div>
-        <div class="menu-item"><span>AMERICANO(冰/熱)</span> <span class="price-tag">$70</span></div>
-        <div class="menu-item"><span>東東里</span> <span class="price-tag">$70</span></div>
-        <div class="menu-item"><span>拿鐵(冰/熱)</span> <span class="price-tag">$75</span></div>
-        
+    <main class="container">
+        <section class="menu-card">
+            <div class="category">
+                <h3>☕ COFFEE</h3>
+                <div class="sub-category">
+                    <h4>手沖 (冰/熱)</h4>
+                    <div class="menu-item"><span>金雷娜安芭雅 日曬</span> <span class="price">$80</span></div>
+                    <div class="menu-item"><span>天使藝妓</span> <span class="price">$80</span></div>
+                    <div class="menu-item"><span>仲夏夜之月</span> <span class="price">$90</span></div>
+                    <div class="menu-item"><span>橘波旁</span> <span class="price">$100</span></div>
+                    <div class="menu-item"><span>祕密花園藝妓</span> <span class="price">$130</span></div>
+                </div>
 
-        <h3>🥤 DRINK </h3>
-        <div class="menu-item"><span>柚香汽泡飲</span> <span class="price-tag">$75</span></div>
-        <div class="menu-item"><span>柚香咖啡</span> <span class="price-tag">$75</span></div>
+                <div class="sub-category">
+                    <h4>花式 & 義式</h4>
+                    <div class="menu-item"><span>LONG BLACK(冰/熱)</span> <span class="price">$70</span></div>
+                    <div class="menu-item"><span>AMERICANO(冰/熱)</span> <span class="price">$70</span></div>
+                    <div class="menu-item"><span>東東里</span> <span class="price">$70</span></div>
+                    <div class="menu-item"><span>拿鐵(冰/熱)</span> <span class="price">$75</span></div>
+                </div>
+            </div>
 
-        <!-- 甜點區 -->
-        <h3>🍰 甜點</h3>
-        <div class="menu-item"><span>提拉米蘇</span> <span class="price-tag">$70</span></div>
+            <div class="category">
+                <h3>🥤 DRINK</h3>
+                <div class="menu-item"><span>柚香汽泡飲</span> <span class="price">$75</span></div>
+                <div class="menu-item"><span>柚香咖啡</span> <span class="price">$75</span></div>
+            </div>
 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCeZBf5ywZLGY6N1iOIHhHL1IRxyYVOE67izFktlj6OaBwwg/viewform?embedded=true">
-        </iframe>
-    </div>
-</div>
+            <div class="category">
+                <h3>🍰 甜點</h3>
+                <div class="menu-item"><span>提拉米蘇</span> <span class="price">$70</span></div>
+            </div>
 
+            <div class="form-section">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCeZBf5ywZLGY6N1iOIHhHL1IRxyYVOE67izFktlj6OaBwwg/viewform?embedded=true">載入中…</iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
