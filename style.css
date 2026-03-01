@@ -1,6 +1,13 @@
+:root {
+    --primary-red: #ff6b6b;
+    --coffee-brown: #6f4e37;
+    --price-orange: #e67e22;
+    --bg-gray: #f4f7f6;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
 * {
     box-sizing: border-box;
-    overflow-x: hidden
 }
 
 html, body {
@@ -8,58 +15,139 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; 
-    background-color: #f4f7f6; /* 背景灰色 */
+    background-color: var(--bg-gray);
+    font-family: "Microsoft JhengHei", sans-serif;
 }
 
-/* 2. Header 置中 */
+/* Header 置中與顏色 */
 .main-header {
     width: 100%;
     background: white;
     padding: 40px 0;
     text-align: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
 .header-container {
-    width: 90%; 
+    width: 90%;
     max-width: 700px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-/* 3. 菜單卡片置中 */
+h1 {
+    color: var(--primary-red);
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+}
+
+/* 注意事項卡片 */
+.notice-card {
+    background: #fffafa;
+    border: 1px solid #ffebeb;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .rules-grid { grid-template-columns: 1fr; }
+}
+
+.rule-item strong { color: var(--coffee-brown); }
+.rule-item ul { font-size: 0.9rem; padding-left: 20px; }
+
+/* 菜單卡片置中 */
 .container {
     width: 100%;
-    padding: 20px 0; 
+    padding: 30px 0;
 }
 
 .menu-card {
     background: white;
-    width: 92%; 
-    max-width: 800px; 
-    margin: 0 auto; 
-    padding: 30px 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 92%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 35px 20px;
+    border-radius: 25px;
+    box-shadow: var(--card-shadow);
 }
 
-/* 4. 品項排版 */
+/* 讓整個類別區域的內容（標題）都置中 */
+.category {
+    margin-bottom: 40px;
+    text-align: center; /* 關鍵：這會讓內部的 h3 和 h4 都置中 */
+}
+
+.category h3 {
+    color: var(--primary-red);
+    border-bottom: 2px solid var(--primary-red);
+    display: inline-block; /* 讓底線跟隨文字長度 */
+    padding: 0 15px 5px;   /* 增加一點底部的空間讓線條更好看 */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.category h4 {
+    color: #888;
+    margin: 15px 0 10px;
+    font-size: 1rem;
+    /* 因為父層設定了 text-align: center，h4 也會自動置中 */
+}
+
+/* 確保菜單品項本身在卡片中也是水平置中 */
 .menu-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 500px;
-    margin: 0 auto 15px; 
-    padding: 10px;
+    margin: 0 auto 12px; /* 透過 auto 讓整個區塊在卡片內置中 */
+    padding: 12px;
     border-bottom: 1px dashed #eee;
     cursor: pointer;
-    border-radius: 8px; 
+    border-radius: 8px;
     transition: background-color 0.2s ease;
+}
+
+h4 { color: #888; margin: 15px 0 10px; }
+
+/* 品項排版與價格顏色 */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto 12px;
+    padding: 12px;
+    border-bottom: 1px dashed #eee;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.price {
+    color: var(--price-orange);
+    font-weight: bold;
 }
 
 /* Google Form */
 .form-section {
     width: 100%;
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 iframe {
